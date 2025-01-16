@@ -14,46 +14,12 @@
 
   <!-- CategoryItemList -->
   <div class="item-list">
-    <app-product-card
-      image="assets/capicola.jpg"
-      title="Capicola"
-      price="$14.99"
-    ></app-product-card>
-
-    <app-product-card
-      image="assets/capicola.jpg"
-      title="Capicola"
-      price="$14.99"
-    ></app-product-card>
-
-    <app-product-card
-      image="assets/capicola.jpg"
-      title="Capicola"
-      price="$14.99"
-    ></app-product-card>
-
-    <app-product-card
-      image="assets/capicola.jpg"
-      title="Capicola"
-      price="$14.99"
-    ></app-product-card>
-
-    <app-product-card
-      image="assets/capicola.jpg"
-      title="Capicola"
-      price="$14.99"
-    ></app-product-card>
-
-    <app-product-card
-      image="assets/capicola.jpg"
-      title="Capicola"
-      price="$14.99"
-    ></app-product-card>
-
-    <app-product-card
-      image="assets/capicola.jpg"
-      title="Capicola"
-      price="$14.99"
-    ></app-product-card>
+    <div *ngFor="let product of products">
+      <app-product-card
+        image="{{ product.image }}"
+        title="{{ product.name }}"
+        price="{{ product.price }}"
+      ></app-product-card>
+    </div>
   </div>
 </div>

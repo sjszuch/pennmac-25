@@ -5,6 +5,7 @@ import { ProductCardComponent } from "./components/product-card/product-card.com
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { RouterLink } from '@angular/router';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -14,4 +15,7 @@ import { RouterLink } from '@angular/router';
 })
 export class AppComponent {
   title = 'pennmac-25';
+
+  
+
 }
