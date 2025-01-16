@@ -1,0 +1,62 @@
+.navbar {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  padding: 0.5rem 1rem;
+}
+
+.m-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.hamburger {
+  height: 1.5rem;
+}
+
+.cart {
+  filter: brightness(0);
+  height: 1.5rem;
+}
+
+.pennmac-logo {
+  height: 2rem;
+}
+
+.m-bot {
+  text-align: center;
+}
+
+.search-bar {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar input {
+  width: 70%;
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  height: 1rem;
+}
+
+.search-bar button {
+  height: 2rem;
+  width: 2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #950002;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+
+  img {
+    height: 1rem;
+    filter: invert(1);
+    text-align: center;
+  }
+}
