@@ -1,0 +1,25 @@
+<div class="admin-container">
+  <h1>Admin Page: Add an Item</h1>
+
+  <form #productForm="ngForm">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" ngModel required />
+    </div>
+    <div>
+      <label for="price">Price:</label>
+      <input type="text" id="price" name="price" step="0.01" ngModel required />
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <input type="text" id="description" name="description" ngModel required />
+    </div>
+    <div>
+      <label for="image">Image Directory:</label>
+      <input type="text" id="image" name="image" ngModel required />
+    </div>
+    <div>
+      <button (click)="submitProduct()">Add Item</button>
+    </div>
+  </form>
+</div>
