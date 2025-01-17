@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/pennmac-25",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
