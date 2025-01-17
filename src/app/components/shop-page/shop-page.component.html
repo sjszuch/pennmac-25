@@ -15,7 +15,7 @@
   <div class="item-list">
     <div *ngFor="let product of products">
       <app-product-card
-        image="{{ product.image }}"
+        image="assets/{{ product.image }}"
         title="{{ product.name }}"
         price="{{ product.price }}"
       ></app-product-card>
