@@ -8,9 +8,17 @@
   padding: 0.5rem 1rem;
   h3 {
     margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bolder;
   }
 
   p {
     max-width: 40rem;
+  }
+}
+
+.categories {
+  @media (min-width: 768px) {
+    padding: 1rem 3rem;
   }
 }

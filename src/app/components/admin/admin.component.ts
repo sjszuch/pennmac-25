@@ -2,7 +2,7 @@ import { Component, ViewChild, Inject, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgForm } from '@angular/forms';
 import { Firestore, collection, addDoc, getDocs } from '@angular/fire/firestore';
-import { db } from '../../../environments/environment';
+// import { db } from '../../../environments/environment';
 
 @Component({
   selector: 'app-admin',

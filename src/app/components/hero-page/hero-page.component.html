@@ -1,108 +1,114 @@
 <div class="hero-container">
   <img src="assets/pennmac.jfif" alt="" class="hero-img" />
 
-  <div class="section-description">
-    <h3>Deli</h3>
-    <p>
-      Explore our curated deli section- featuring sliced deli, cheese, and more
-      from around the world!
-    </p>
-  </div>
+  <div class="categories">
+    <div class="section-description">
+      <h3>Featured Products</h3>
+      <p>
+        Skip the snow and get our newest products delivered right to your
+        doorstep! These are the products we are most excited about this month.
+      </p>
+    </div>
 
-  <!-- DELI SECTION -->
-  <div class="horizontal-scroll">
-    <app-category-card
-      image="assets/capicola.jpg"
-      category="Sliced Deli Meat"
-      description="Shop our curated deli section!"
-      link="/shop"
-    ></app-category-card>
+    <!-- FEATURED SECTION -->
+    <div class="horizontal-scroll">
+      <app-product-card
+        image="assets/bread.jpg"
+        title="Breadworks Ciabatta Bread 1lb 3oz"
+        price="6.29"
+      ></app-product-card>
 
-    <app-category-card
-      image="assets/sliced-deli-cheese.jpg"
-      category="Sliced Deli Cheese"
-      description="We have a wide variety of cheeses from all over the world."
-      link="/shop"
-    ></app-category-card>
+      <app-product-card
+        image="assets/foccacia.jpg"
+        title="Colangelo's Artichoke Foccacia"
+        price="9.99"
+      ></app-product-card>
+    </div>
 
-    <app-category-card
-      image="assets/pepperoni-stick.jpg"
-      category="Whole Pepperoni Sticks"
-      description="Shop our pepperoni!"
-      link="/shop"
-    ></app-category-card>
+    <div class="section-description">
+      <h3>Deli</h3>
+      <p>
+        Explore our curated deli section- featuring sliced deli, cheese, and
+        more from around the world!
+      </p>
+    </div>
 
-    <app-category-card
-      image="assets/olives.jpg"
-      category="Olives"
-      description="Shop our olives!"
-      link="/shop"
-    ></app-category-card>
+    <!-- Category sections must be enclosed in div class horizontal-scroll -->
+    <!-- DELI SECTION -->
+    <div class="horizontal-scroll">
+      <app-category-card
+        image="assets/capicola.jpg"
+        category="Sliced Deli Meat"
+        description="Shop our curated deli section!"
+        link="/shop"
+      ></app-category-card>
 
-    <app-category-card
-      image="assets/tray.jpg"
-      category="Party Trays"
-      description="Shop our pre-made party trays!"
-      link="/shop"
-    ></app-category-card>
+      <app-category-card
+        image="assets/sliced-deli-cheese.jpg"
+        category="Sliced Deli Cheese"
+        description="We have a wide variety of cheeses from all over the world."
+        link="/shop"
+      ></app-category-card>
 
-    <app-category-card
-      image="assets/spread.jpg"
-      category="Dips and Spreads"
-      description="Shop our dips, spreads and bruschetta!"
-      link="/shop"
-    ></app-category-card>
-  </div>
+      <app-category-card
+        image="assets/pepperoni-stick.jpg"
+        category="Whole Pepperoni Sticks"
+        description="Shop our pepperoni!"
+        link="/shop"
+      ></app-category-card>
 
-  <div class="section-description">
-    <h3>Deli</h3>
-    <p>
-      Explore our curated deli section- featuring sliced deli, cheese, and more
-      from around the world!
-    </p>
-  </div>
-  <!-- DELI SECTION -->
-  <div class="horizontal-scroll">
-    <app-category-card
-      image="assets/capicola.jpg"
-      category="Sliced Deli Meat"
-      description="Shop our curated deli section!"
-      link="/shop"
-    ></app-category-card>
+      <app-category-card
+        image="assets/olives.jpg"
+        category="Olives"
+        description="Shop our olives!"
+        link="/shop"
+      ></app-category-card>
 
-    <app-category-card
-      image="assets/sliced-deli-cheese.jpg"
-      category="Sliced Deli Cheese"
-      description="We have a wide variety of cheeses from all over the world."
-      link="/shop"
-    ></app-category-card>
+      <app-category-card
+        image="assets/tray.jpg"
+        category="Party Trays"
+        description="Shop our pre-made party trays!"
+        link="/shop"
+      ></app-category-card>
 
-    <app-category-card
-      image="assets/pepperoni-stick.jpg"
-      category="Whole Pepperoni Sticks"
-      description="Shop our pepperoni!"
-      link="/shop"
-    ></app-category-card>
+      <app-category-card
+        image="assets/spread.jpg"
+        category="Dips and Spreads"
+        description="Shop our dips, spreads and bruschetta!"
+        link="/shop"
+      ></app-category-card>
+    </div>
 
-    <app-category-card
-      image="assets/olives.jpg"
-      category="Olives"
-      description="Shop our olives!"
-      link="/shop"
-    ></app-category-card>
+    <div class="section-description">
+      <h3>Pasta</h3>
+      <p>
+        From fresh to frozen pasta, we have it all! Explore our wide selection
+        and treat yourself to a premium pasta experience you can only find at
+        pennmac!
+      </p>
+    </div>
+    <!-- PASTA SECTION -->
+    <div class="horizontal-scroll">
+      <app-category-card
+        image="assets/fresh-pasta.png"
+        category="Fresh Pasta"
+        description="Take a look at our freshly made pasta selection!"
+        link="/shop"
+      ></app-category-card>
 
-    <app-category-card
-      image="assets/tray.jpg"
-      category="Party Trays"
-      description="Shop our pre-made party trays!"
-      link="/shop"
-    ></app-category-card>
+      <app-category-card
+        image="assets/ravioli.jpg"
+        category="Frozen Pasta"
+        description="Easy to make and delicious to eat! Shop for frozen pasta and ravioli here!"
+        link="/shop"
+      ></app-category-card>
 
-    <app-category-card
-      image="assets/spread.jpg"
-      category="Dips and Spreads"
-      description="Shop our dips, spreads and bruschetta!"
-      link="/shop"
-    ></app-category-card>
+      <app-category-card
+        image="assets/setaro.jpg"
+        category="Shop by Brand"
+        description="Browse our wide variety of pasta brands and choose your favorite!"
+        link="/shop"
+      ></app-category-card>
+    </div>
   </div>
 </div>
