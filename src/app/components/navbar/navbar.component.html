@@ -8,7 +8,12 @@
       ><img src="assets/pennmac-logo.png" alt="" class="pennmac-logo"
     /></a>
 
-    <img src="assets/cart-icon.svg" class="cart" alt="" />
+    <div class="cart-holder">
+      <a routerLink="/checkout">
+        <img src="assets/cart-icon.svg" class="cart" alt="" />
+      </a>
+      <p>{{ cartNumber }}</p>
+    </div>
   </div>
 
   <div class="m-bot">

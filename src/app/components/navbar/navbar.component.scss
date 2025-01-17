@@ -60,3 +60,26 @@
     text-align: center;
   }
 }
+
+.cart-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+
+  p {
+    background-color: #950002;
+    color: white;
+    padding: 0.25rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
