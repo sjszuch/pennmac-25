@@ -2,21 +2,47 @@
   <h1>Admin Page: Add an Item</h1>
 
   <form #productForm="ngForm">
-    <div>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" ngModel required />
+    <div class="first">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" ngModel required />
+      </div>
+      <div>
+        <label for="price">Price:</label>
+        <input
+          type="text"
+          id="price"
+          name="price"
+          ngModel
+          required
+          placeholder="$0.00"
+        />
+      </div>
     </div>
-    <div>
-      <label for="price">Price:</label>
-      <input type="text" id="price" name="price" step="0.01" ngModel required />
-    </div>
-    <div>
-      <label for="description">Description:</label>
-      <input type="text" id="description" name="description" ngModel required />
+
+    <div class="second">
+      <label for="description" class="input-description">Description:</label>
+      <textarea
+        id="description"
+        name="description"
+        ngModel
+        required
+        rows="5"
+      ></textarea>
     </div>
     <div>
       <label for="image">Image Directory:</label>
       <input type="text" id="image" name="image" ngModel required />
+    </div>
+    <div>
+      <label for="category">Category:</label>
+      <select id="category" name="category" ngModel required>
+        <option value="" disabled selected>Select a category</option>
+        <option value="electronics">Deli Meats</option>
+        <option value="clothing">Cheeses</option>
+        <option value="books">Pasta</option>
+        <option value="furniture">Trays</option>
+      </select>
     </div>
     <div>
       <button (click)="submitProduct()">Add Item</button>
