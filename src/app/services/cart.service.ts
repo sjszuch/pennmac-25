@@ -20,5 +20,9 @@ export class CartService {
     this.cartItems.push(item);
   }
 
+  removeItem(item: any) {
+    this.cartItems = this.cartItems.filter((i) => i !== item);
+  }
+
   constructor() { }
 }

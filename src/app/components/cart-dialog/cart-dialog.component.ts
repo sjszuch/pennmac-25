@@ -25,6 +25,11 @@ export class CartDialogComponent implements OnInit {
     this.dialog.closeAll();
   }
 
+  removeItem(item: any) {
+    this.cartService.removeItem(item);
+    this.cartItems = this.getAllItems();
+  }
+
   
   getAllItems() {
     return this.cartService.getItems();
