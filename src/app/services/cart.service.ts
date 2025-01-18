@@ -19,7 +19,6 @@ export class CartService {
   addItem(item: any) {
     this.cartItems.push(item);
   }
-  
 
   constructor() { }
 }

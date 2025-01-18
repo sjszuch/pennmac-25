@@ -9,7 +9,7 @@
     /></a>
 
     <div class="cart-holder">
-      <a routerLink="/checkout">
+      <a (click)="openCartDialog()">
         <img src="assets/cart-icon.svg" class="cart" alt="" />
       </a>
       <p>{{ cartNumber }}</p>

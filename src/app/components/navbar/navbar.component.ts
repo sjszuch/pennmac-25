@@ -1,6 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CartService } from '../../services/cart.service';
+import {
+  MatDialog,
+  MatDialogActions,
+  MatDialogClose,
+  MatDialogContent,
+  MatDialogRef,
+  MatDialogTitle,
+} from '@angular/material/dialog';
+import { CartDialogComponent } from '../cart-dialog/cart-dialog.component';
 
 
 @Component({
@@ -15,5 +24,11 @@ export class NavbarComponent {
   
   constructor(private cartService: CartService) {
     this.cartNumber = this.cartService.numberOfItems();
+  }
+
+  readonly dialog = inject(MatDialog);
+  
+  openCartDialog() {
+    this.dialog.open(CartDialogComponent);
   }
 }
