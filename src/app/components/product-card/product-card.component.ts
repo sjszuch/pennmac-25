@@ -6,11 +6,15 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { MatDialog } from '@angular/material/dialog';
 import { CartDialogComponent } from '../cart-dialog/cart-dialog.component';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import { CommonModule } from '@angular/common';
+import { MatTooltipModule } from '@angular/material/tooltip';
+
 
 @Component({
   selector: 'app-product-card',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, MatIconModule, CommonModule, MatTooltipModule],
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.scss'
 })
@@ -19,6 +23,7 @@ export class ProductCardComponent {
   @Input() title!: string;
   @Input() price!: string;
   @Input() description!: string;
+  @Input() pickuponly!: boolean;
 
   cartService: CartService = inject(CartService);
 

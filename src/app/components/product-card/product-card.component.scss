@@ -14,13 +14,36 @@
   // Shadow
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-  img {
+  .product-photo {
     height: 15rem;
     width: 15rem;
     object-fit: cover;
 
     border-radius: 10px 10px 0 0;
   }
+
+  .pickup-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    position: absolute;
+    background-color: rgb(134, 0, 0);
+    top: 0.5rem;
+    right: 0.5rem;
+    border-radius: 5px;
+    padding: 0.5rem;
+  }
+}
+
+.add-cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.product-top {
+  position: relative;
 }
 
 .text {
