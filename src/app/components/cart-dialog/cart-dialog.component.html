@@ -1,9 +1,9 @@
-<h2 mat-dialog-title>Shopping Cart</h2>
+<h2 mat-dialog-title class="dialog-title">Shopping Cart</h2>
 <mat-dialog-content class="dialog-content">
   <div class="shopping-list">
     <div *ngFor="let item of cartItems" class="shopping-item">
       <div class="left">
-        <img src="assets/olives.jpg" alt="" class="item-icon" />
+        <img src="{{ item.image }}" alt="" class="item-icon" />
       </div>
       <div class="right">
         <p class="item-title">{{ item.title }}</p>
@@ -14,5 +14,7 @@
   </div>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
+  <p>Total: {{ totalPrice }}</p>
+  <button>Checkout</button>
   <button (click)="close()">Cancel</button>
 </mat-dialog-actions>

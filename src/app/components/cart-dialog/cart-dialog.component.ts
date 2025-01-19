@@ -15,9 +15,11 @@ export class CartDialogComponent implements OnInit {
 
   cartItems: any;
 
+  totalPrice = 0;
+
   ngOnInit() {
     this.cartItems = this.getAllItems();
-  }
+    }
 
   close() {
     console.log(this.cartItems);
@@ -29,7 +31,6 @@ export class CartDialogComponent implements OnInit {
     this.cartService.removeItem(item);
     this.cartItems = this.getAllItems();
   }
-
   
   getAllItems() {
     return this.cartService.getItems();

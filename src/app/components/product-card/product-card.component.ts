@@ -4,7 +4,8 @@ import { RouterLink } from '@angular/router';
 import { CartService } from '../../services/cart.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { provideAnimations } from '@angular/platform-browser/animations';
-
+import { MatDialog } from '@angular/material/dialog';
+import { CartDialogComponent } from '../cart-dialog/cart-dialog.component';
 
 @Component({
   selector: 'app-product-card',
@@ -21,7 +22,6 @@ export class ProductCardComponent {
 
   cartService: CartService = inject(CartService);
 
-
   cartItems = this.cartService.getItems();
 
   constructor() {
@@ -30,12 +30,19 @@ export class ProductCardComponent {
 
   private _snackBar = inject(MatSnackBar);
 
+  private _dialog = inject(MatDialog);
+
   openSnackBar(message: string, action: string) {
-    this._snackBar.open(message, action);
+    let snackBarRef = this._snackBar.open(message, action, {
+      duration: 2000
+    });
+
+    snackBarRef.onAction().subscribe(() => {
+      this._dialog.open(CartDialogComponent);
+    });
   }
 
   addToCart() {
-    
     this.cartService.addItem({
       image: this.image,
       title: this.title,
@@ -43,9 +50,6 @@ export class ProductCardComponent {
       description: this.description
     });
 
-    this._snackBar.open('Item added!', 'Close', {
-      duration: 2000
-    });
-
+    this.openSnackBar('Item added!', 'View Cart');
   }
 }
