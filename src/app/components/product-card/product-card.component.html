@@ -5,8 +5,8 @@
         src="assets/store-pickup.ico"
         alt=""
         class="pickup-icon"
-        *ngIf="pickuponly"
-        [matTooltip]="pickuponly ? 'This item is store pickup only!' : ''"
+        *ngIf="pickupOnly"
+        [matTooltip]="pickupOnly ? 'This item is store pickup only!' : ''"
       />
       <img src="{{ image }}" alt="" class="product-photo" />
     </div>
@@ -16,12 +16,7 @@
     <h3>{{ title }}</h3>
     <p>${{ price }}</p>
     <div class="add-cart">
-      <button
-        (click)="addToCart()"
-        [matTooltip]="pickuponly ? 'This item is store pickup only!' : ''"
-      >
-        Add to Cart
-      </button>
+      <button (click)="addToCart()">Add to Cart</button>
     </div>
   </div>
 </div>

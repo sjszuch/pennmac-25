@@ -24,6 +24,7 @@ export class ShopPageComponent implements OnInit {
   cartService: CartService = inject(CartService);
 
   async ngOnInit() {
+    this.orderType = localStorage.getItem('type');
     await this.loadAllProducts();
   }
 
@@ -34,7 +35,7 @@ export class ShopPageComponent implements OnInit {
       'price': this.productForm.value.price,
       'description': this.productForm.value.description,
       'image': this.productForm.value.image,
-      'pickuponly': this.productForm.value.pickuponly
+      'pickupOnly': this.productForm.value.pickupOnly
     });
   }
 

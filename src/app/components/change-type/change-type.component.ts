@@ -1,22 +1,21 @@
 import { Component, inject } from '@angular/core';
-import { CartService } from '../../services/cart.service';
 import { MatDialog } from '@angular/material/dialog';
-
+import { CartService } from '../../services/cart.service';
 
 @Component({
-  selector: 'app-type-dialog',
+  selector: 'app-change-type',
   standalone: true,
   imports: [],
-  templateUrl: './type-dialog.component.html',
-  styleUrl: './type-dialog.component.scss'
+  templateUrl: './change-type.component.html',
+  styleUrl: './change-type.component.scss'
 })
-export class TypeDialogComponent {
+export class ChangeTypeComponent {
   constructor(private dialog: MatDialog) {}
     cartService: CartService = inject(CartService);
 
   setType(type: any) {
     localStorage.setItem('type', type);
-    alert('Type set to ' + localStorage.getItem('type'));
     this.dialog.closeAll();
+    window.location.reload();
   }
 }

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogActions, MatDialogContent } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../../services/cart.service';
+import { TypeDialogComponent } from '../type-dialog/type-dialog.component';
+import { ChangeTypeComponent } from '../change-type/change-type.component';
 
 @Component({
   selector: 'app-cart-dialog',
@@ -21,11 +23,16 @@ export class CartDialogComponent implements OnInit {
 
   ngOnInit() {
     this.cartItems = this.getAllItems();
-    this.orderType = this.cartService.ordertype;
+    this.orderType = localStorage.getItem('type');
     }
 
   close() {
     this.dialog.closeAll();
+  }
+
+  changeType() {
+    this.close();
+    this.dialog.open(ChangeTypeComponent);
   }
 
   removeItem(item: any) {

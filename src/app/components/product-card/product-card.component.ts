@@ -23,7 +23,7 @@ export class ProductCardComponent {
   @Input() title!: string;
   @Input() price!: string;
   @Input() description!: string;
-  @Input() pickuponly!: boolean;
+  @Input() pickupOnly!: boolean;
 
   cartService: CartService = inject(CartService);
 
@@ -52,7 +52,8 @@ export class ProductCardComponent {
       image: this.image,
       title: this.title,
       price: this.price,
-      description: this.description
+      description: this.description,
+      pickuponly: this.pickupOnly
     });
 
     this.openSnackBar('Item added!', 'View Cart');

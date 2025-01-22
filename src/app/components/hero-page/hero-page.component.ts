@@ -14,8 +14,4 @@ import { OnInit } from '@angular/core';
 })
 export class HeroPageComponent {
   constructor(private dialog: MatDialog) {}
-
-  ngOnInit(): void {
-    this.dialog.open(TypeDialogComponent, {disableClose: true});
-  }
 }
