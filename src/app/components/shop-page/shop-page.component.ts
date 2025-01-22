@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ViewChild, inject } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Firestore, collection, addDoc, getDocs } from '@angular/fire/firestore';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-shop-page',
@@ -18,6 +19,8 @@ export class ShopPageComponent implements OnInit {
 
   @ViewChild('productForm') productForm: any;
   firestore: Firestore = inject(Firestore);
+
+  cartService: CartService = inject(CartService);
 
   async ngOnInit() {
     await this.loadAllProducts();

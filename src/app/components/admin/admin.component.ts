@@ -22,7 +22,8 @@ export class AdminComponent {
       'name': this.productForm.value.name,
       'price': this.productForm.value.price,
       'description': this.productForm.value.description,
-      'image': this.productForm.value.image
+      'image': this.productForm.value.image,
+      'pickuponly': this.productForm.value.pickuponly
     });
   }
 
@@ -47,7 +48,7 @@ export class AdminComponent {
   // This function submits the user's form and resets it
   async submitProduct() {
     alert('Product submitted');
-    alert(this.productForm.value.name + ' ' + this.productForm.value.price + ' ' + this.productForm.value.description); 
+    alert(this.productForm.value.name + ' ' + this.productForm.value.price + ' ' + this.productForm.value.description + ' ' + this.productForm.value.pickuponly); 
     await this.saveData();
     this.resetForm();
     this.logAllProducts();
