@@ -13,12 +13,15 @@ import { CartService } from '../../services/cart.service';
 export class CartDialogComponent implements OnInit {
   constructor(private dialog: MatDialog, private cartService: CartService) {}
 
+  orderType: any;
+
   cartItems: any;
 
   totalPrice = 0;
 
   ngOnInit() {
     this.cartItems = this.getAllItems();
+    this.orderType = this.cartService.ordertype;
     }
 
   close() {

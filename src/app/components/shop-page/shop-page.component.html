@@ -15,7 +15,7 @@
   <div class="item-list">
     <div *ngFor="let product of products">
       <app-product-card
-        *ngIf="!(cartService.ordertype === 'Delivery' && product.pickupOnly)"
+        *ngIf="!(product.pickupOnly && cartService.ordertype === 'Delivery')"
         image="assets/{{ product.image }}"
         title="{{ product.name }}"
         price="{{ product.price }}"

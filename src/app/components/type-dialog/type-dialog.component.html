@@ -1,8 +1,23 @@
 <div class="type-container">
+  <h1>Welcome to Pennsylvania Macaroni Company!</h1>
   <p>There are now three ways to shop PennMac!</p>
   <div class="type-buttons">
-    <button (click)="setType('Delivery')">Delivery</button>
-    <button>Pickup</button>
-    <button>Store-to-Car</button>
+    <!-- Delivery Type -->
+    <div class="type-option" (click)="setType('Delivery')">
+      <img src="assets/delivery-truck.png" alt="" />
+      <h3>Delivery (FedEx)</h3>
+    </div>
+
+    <!-- In-Store Pickup Type -->
+    <div class="type-option" (click)="setType('Pickup')">
+      <img src="assets/location.png" alt="" />
+      <h3>In-Store Pickup</h3>
+    </div>
+
+    <!-- Curbside Pickup Type -->
+    <div class="type-option" (click)="setType('Curbside')">
+      <img src="assets/curbside.png" alt="" />
+      <h3>Curbside Pickup</h3>
+    </div>
   </div>
 </div>

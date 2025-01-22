@@ -16,6 +16,7 @@ import { CartService } from '../../services/cart.service';
 export class ShopPageComponent implements OnInit {
 
   products: any[] = [];
+  orderType: any;
 
   @ViewChild('productForm') productForm: any;
   firestore: Firestore = inject(Firestore);
@@ -32,7 +33,8 @@ export class ShopPageComponent implements OnInit {
       'name': this.productForm.value.name,
       'price': this.productForm.value.price,
       'description': this.productForm.value.description,
-      'image': this.productForm.value.image
+      'image': this.productForm.value.image,
+      'pickuponly': this.productForm.value.pickuponly
     });
   }
 
