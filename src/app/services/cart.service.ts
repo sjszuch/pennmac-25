@@ -7,6 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 export class CartService {
   private cartItems: any[] = [];
   private cartItemsSubject = new BehaviorSubject<any[]>(this.cartItems);
+  ordertype: any;
 
   cartItems$ = this.cartItemsSubject.asObservable();
 
@@ -28,5 +29,12 @@ export class CartService {
   removeItem(item: any) {
     this.cartItems = this.cartItems.filter((i) => i !== item);
     this.cartItemsSubject.next([...this.cartItems]);
+  }
+
+  changeOrderType(type: any) {
+    this.ordertype = type;
+
+    // temporary alert
+    alert('Order type changed to ' + type);
   }
 }

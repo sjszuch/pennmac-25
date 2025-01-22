@@ -22,8 +22,6 @@ export class CartDialogComponent implements OnInit {
     }
 
   close() {
-    console.log(this.cartItems);
-    
     this.dialog.closeAll();
   }
 
