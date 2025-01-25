@@ -1,6 +1,12 @@
 {
   "hosting": {
     "public": "dist/pennmac-25",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",

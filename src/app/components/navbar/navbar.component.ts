@@ -4,12 +4,12 @@ import { CartService } from '../../services/cart.service';
 import { MatDialog } from '@angular/material/dialog';
 import { CartDialogComponent } from '../cart-dialog/cart-dialog.component';
 import { HostListener } from '@angular/core';
-
+import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, MatMenuModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })

@@ -1,19 +1,8 @@
 <div class="navbar">
   <div class="m-top">
-    <a routerLink="/admin"
-      ><img src="assets/hamburger.png" class="hamburger" alt=""
-    /></a>
-
     <a routerLink="/home"
       ><img src="assets/pennmac-logo.png" alt="" class="pennmac-logo"
     /></a>
-
-    <div class="cart-holder">
-      <a (click)="openCartDialog()">
-        <img src="assets/cart-icon.svg" class="cart" alt="" />
-      </a>
-      <a (click)="openCartDialog()" class="number">{{ cartNumber }}</a>
-    </div>
   </div>
 
   <div class="m-bot">
@@ -25,4 +14,43 @@
       </button>
     </div>
   </div>
+
+  <div class="m-bot-two">
+    <div class="menu-holder">
+      <button mat-button [matMenuTriggerFor]="menu" class="menu-btn">
+        <img src="assets/ham.png" alt="" />
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>About</button>
+        <button mat-menu-item>Contact</button>
+        <button mat-menu-item>Order & Shipping Info</button>
+        <button mat-menu-item>Store-to-Car Pickup</button>
+      </mat-menu>
+    </div>
+
+    <div class="cart-holder">
+      <a (click)="openCartDialog()">
+        <img src="assets/shopping-cart.png" class="cart" alt="" />
+      </a>
+      <a (click)="openCartDialog()" class="number">{{ cartNumber }}</a>
+    </div>
+  </div>
+</div>
+
+<div class="contact-info">
+  <div class="desktop-contact">
+    <p>2010-2012 Penn Avenue</p>
+    <p>Pittsburgh, PA 15222</p>
+  </div>
+  <a href="#">
+    <img src="assets/facebook.png" alt="" />
+  </a>
+
+  <a href="#">
+    <img src="assets/twitterx.png" alt="" />
+  </a>
+
+  <a href="#">
+    <img src="assets/insta.png" alt="" />
+  </a>
 </div>
