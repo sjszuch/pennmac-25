@@ -1,6 +1,8 @@
 <h2 mat-dialog-title class="dialog-title">Shopping Cart</h2>
-<p>Type: {{ orderType }}</p>
-<button (click)="changeType()">Change Order Type</button>
+<div class="type-container">
+  <p>Type: {{ orderType }}</p>
+  <button (click)="changeType()">Change Order Type</button>
+</div>
 <mat-dialog-content class="dialog-content">
   <div class="shopping-list">
     <div *ngFor="let item of cartItems" class="shopping-item">
@@ -17,6 +19,6 @@
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <p>Total: {{ totalPrice }}</p>
-  <button>Checkout</button>
-  <button (click)="close()">Cancel</button>
+  <button class="checkout-btn">Checkout</button>
+  <button (click)="close()" class="cancel-btn">Cancel</button>
 </mat-dialog-actions>

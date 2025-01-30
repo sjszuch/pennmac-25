@@ -39,4 +39,18 @@
     max-height: 3rem;
     font-weight: bold;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .left,
+    .right {
+      width: 100%;
+    }
+
+    img {
+      max-height: 20rem;
+      margin-bottom: 2rem;
+    }
+  }
 }

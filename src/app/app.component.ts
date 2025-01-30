@@ -6,12 +6,13 @@ import { NavbarComponent } from "./components/navbar/navbar.component";
 import { RouterLink } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { TypeDialogComponent } from './components/type-dialog/type-dialog.component';
+import { BotNavComponent } from "./components/bot-nav/bot-nav.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FeaturedComponent, ProductCardComponent, NavbarComponent, RouterLink],
+  imports: [RouterOutlet, FeaturedComponent, ProductCardComponent, NavbarComponent, RouterLink, BotNavComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

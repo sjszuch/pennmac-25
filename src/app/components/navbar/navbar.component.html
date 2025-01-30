@@ -1,56 +1,71 @@
-<div class="navbar">
-  <div class="m-top">
-    <a routerLink="/home"
-      ><img src="assets/pennmac-logo.png" alt="" class="pennmac-logo"
-    /></a>
+<!-- Mobile Navbar -->
+<div class="navbar-mobile">
+  <!-- PennMac Logo/Home Button -->
+  <div class="logo">
+    <a routerLink="/home">
+      <img src="assets/pennmac-logo.png" alt="PennMac Logo" class="logo" />
+    </a>
   </div>
 
-  <div class="m-bot">
-    <!-- Search bar -->
-    <div class="search-bar">
-      <input type="text" placeholder="Search" class="search-text" />
-      <button class="search-button">
-        <img src="assets/search.png" alt="" />
-      </button>
-    </div>
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" placeholder="Search..." class="search-input" />
+    <button class="search-button">Go!</button>
   </div>
 
-  <div class="m-bot-two">
-    <div class="menu-holder">
-      <button mat-button [matMenuTriggerFor]="menu" class="menu-btn">
-        <img src="assets/ham.png" alt="" />
-      </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>About</button>
-        <button mat-menu-item>Contact</button>
-        <button mat-menu-item>Order & Shipping Info</button>
-        <button mat-menu-item>Store-to-Car Pickup</button>
-      </mat-menu>
-    </div>
-
-    <div class="cart-holder">
-      <a (click)="openCartDialog()">
-        <img src="assets/shopping-cart.png" class="cart" alt="" />
-      </a>
-      <a (click)="openCartDialog()" class="number">{{ cartNumber }}</a>
+  <!-- The hamburger menu on the left, and cart on the right -->
+  <div class="navbar-under">
+    <button mat-button [matMenuTriggerFor]="menu" class="mat-menu-btn">
+      <img src="assets/ham.png" alt="" class="ham-menu" />
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>About</button>
+      <button mat-menu-item>Contact</button>
+      <button mat-menu-item>Order & Shipping Info</button>
+      <button mat-menu-item>Store-to-Car Pickup</button>
+    </mat-menu>
+    <div class="cart-holder" (click)="openCartDialog()">
+      <img src="assets/cart-icon.svg" alt="" class="cart-icon" />
+      <p class="cart-count">{{ cartNumber }}</p>
     </div>
   </div>
 </div>
 
-<div class="contact-info">
-  <div class="desktop-contact">
-    <p>2010-2012 Penn Avenue</p>
-    <p>Pittsburgh, PA 15222</p>
+<!-- Desktop Navbar -->
+<div class="navbar-desktop">
+  <!-- PennMac Logo/Home Button -->
+
+  <div class="left">
+    <div class="logo">
+      <a routerLink="/home">
+        <img src="assets/pennmac-logo.png" alt="PennMac Logo" class="logo" />
+      </a>
+    </div>
   </div>
-  <a href="#">
-    <img src="assets/facebook.png" alt="" />
-  </a>
 
-  <a href="#">
-    <img src="assets/twitterx.png" alt="" />
-  </a>
+  <!-- <div class="middle">
+    <a href="#">DELI</a>
+    <a href="#">CHEESE</a>
+    <a href="#">MEAT</a>
+  </div> -->
 
-  <a href="#">
-    <img src="assets/insta.png" alt="" />
-  </a>
+  <div class="right">
+    <!-- search -->
+    <div class="search-bar">
+      <input type="text" placeholder="Search..." class="search-input" />
+      <button class="search-button">Go!</button>
+    </div>
+
+    <!-- cart -->
+    <div class="cart-holder" (click)="openCartDialog()">
+      <img src="assets/cart-icon.svg" alt="" class="cart-icon" />
+      <p class="cart-count">{{ cartNumber }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="categories">
+  <a href="#">PASTA</a>
+  <a href="#">CHEESE</a>
+  <a href="#">MEAT</a>
 </div>

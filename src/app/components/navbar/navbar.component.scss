@@ -1,159 +1,176 @@
-.navbar {
-  background-color: #f8f9fa;
-  padding: 0.5rem 1rem;
-  background-color: #015601;
-}
+.navbar-mobile {
+  background-color: #054406;
 
-.m-top {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  text-align: center;
+  flex-direction: column;
+  gap: 1rem;
 
-  a {
-    text-align: center;
-  }
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 1rem;
 }
 
-.hamburger {
-  height: 1.5rem;
-}
-
-.cart {
+.logo {
   height: 2rem;
-}
-
-.pennmac-logo {
-  max-height: 3rem;
-}
-
-.m-bot {
-  text-align: center;
 }
 
 .search-bar {
-  padding: 1rem 0;
+  width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.search-bar input {
-  width: 70%;
-  padding: 0.5rem;
-  border: 1px solid #ced4da;
+.search-input {
   border-radius: 5px;
-  height: 1rem;
+  width: 80%;
+  padding: 0.5rem;
 }
 
-.search-bar button {
-  height: 2rem;
-  width: 2rem;
-  border: none;
+.search-button {
   border-radius: 5px;
-  background-color: #950002;
+  background-color: #950c0c;
   color: white;
-  cursor: pointer;
+  width: 2rem;
+  padding: 0.5rem 0;
   text-align: center;
+}
 
-  img {
-    height: 1rem;
-    filter: invert(1);
-    text-align: center;
-  }
+.navbar-under {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.ham-menu {
+  width: 2rem;
+  cursor: pointer;
+}
+
+.cart-icon {
+  width: 2rem;
 }
 
 .cart-holder {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
   position: relative;
+  cursor: pointer;
 
-  .number {
-    background-color: #950002;
-    color: white;
-    padding: 0.25rem;
-    border-radius: 50%;
+  .cart-count {
     position: absolute;
     top: -0.5rem;
     right: -0.5rem;
-    width: 0.75rem;
-    height: 0.75rem;
+    background-color: rgb(169, 0, 0);
+    color: white;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1rem;
   }
-
-  cursor: pointer;
 }
 
-.m-bot-two {
+.mat-menu-btn {
+  background-color: #05440600;
+}
+
+.navbar-categories {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-}
-
-.menu-holder {
-  margin-right: auto;
-}
-
-.cart-holder {
-  margin-left: auto;
-}
-
-.menu-btn {
-  background-color: transparent;
-  height: 1.5rem;
-  border: none;
-  cursor: pointer;
-
-  img {
-    height: 2rem;
-  }
-
-  &:hover {
-    filter: brightness(0.8);
-    transition: 0.3s;
-  }
-}
-
-.contact-info {
-  background-color: #950002;
-  color: white;
-
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem 1rem;
   gap: 1rem;
-
-  img {
-    height: 1.2rem;
-  }
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  background-color: #950c0c;
 
   a {
     color: white;
     text-decoration: none;
-    padding: 5px;
     border-radius: 5px;
+    font-weight: bold;
+    padding: 0.5rem;
 
     &:hover {
-      background-color: #00000045;
+      background-color: #6d0808;
+      cursor: pointer;
       transition: 0.3s;
     }
   }
 }
 
-.desktop-contact {
-  display: none;
+// on desktop, hide the mobile navbar and show the desktop navbar
+@media (min-width: 768px) {
+  .navbar-mobile {
+    display: none;
+  }
 
-  @media (min-width: 768px) {
+  .navbar-desktop {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #054406;
+  }
+
+  .logo {
+    height: 3rem;
+  }
+
+  .search-cart {
+    display: flex;
+    flex-direction: row;
     gap: 1rem;
+    align-items: center;
+  }
+
+  .search-input {
+    border-radius: 5px;
+    width: 20rem;
+    padding: 0.5rem;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-desktop {
+    display: none;
+  }
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  background-color: #950c0c;
+
+  a {
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 0.5rem;
+
+    &:hover {
+      background-color: #6d0808;
+      cursor: pointer;
+      transition: 0.3s;
+    }
   }
 }

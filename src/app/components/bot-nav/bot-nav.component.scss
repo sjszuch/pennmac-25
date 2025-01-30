@@ -1,0 +1,159 @@
+.navbar {
+  background-color: #f8f9fa;
+  padding: 0.5rem 1rem;
+  background-color: #015601;
+}
+
+.m-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+
+  a {
+    text-align: center;
+  }
+}
+
+.hamburger {
+  height: 1.5rem;
+}
+
+.cart {
+  height: 2rem;
+}
+
+.pennmac-logo {
+  max-height: 3rem;
+}
+
+.m-bot {
+  text-align: center;
+}
+
+.search-bar {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar input {
+  width: 70%;
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  height: 1rem;
+}
+
+.search-bar button {
+  height: 2rem;
+  width: 2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #950002;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+
+  img {
+    height: 1rem;
+    filter: invert(1);
+    text-align: center;
+  }
+}
+
+.cart-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+
+  .number {
+    background-color: #950002;
+    color: white;
+    padding: 0.25rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  cursor: pointer;
+}
+
+.m-bot-two {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+.menu-holder {
+  margin-right: auto;
+}
+
+.cart-holder {
+  margin-left: auto;
+}
+
+.menu-btn {
+  background-color: transparent;
+  height: 1.5rem;
+  border: none;
+  cursor: pointer;
+
+  img {
+    height: 2rem;
+  }
+
+  &:hover {
+    filter: brightness(0.8);
+    transition: 0.3s;
+  }
+}
+
+.contact-info {
+  background-color: #950002;
+  color: white;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  gap: 1rem;
+
+  img {
+    height: 1.2rem;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: #00000045;
+      transition: 0.3s;
+    }
+  }
+}
+
+.desktop-contact {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+    gap: 1rem;
+  }
+}

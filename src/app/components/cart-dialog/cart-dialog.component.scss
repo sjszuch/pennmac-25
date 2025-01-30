@@ -57,3 +57,33 @@
   max-width: 10rem;
   text-wrap: wrap;
 }
+
+.type-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+button {
+  background-color: rgb(0, 91, 0);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 0.5rem;
+
+  &:hover {
+    background-color: rgb(0, 70, 0);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+}
+
+.cancel-btn {
+  background-color: rgb(155, 0, 0);
+
+  &:hover {
+    background-color: rgb(100, 0, 0);
+  }
+}
