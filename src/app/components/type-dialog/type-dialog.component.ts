@@ -16,7 +16,6 @@ export class TypeDialogComponent {
 
   setType(type: any) {
     localStorage.setItem('type', type);
-    alert('Type set to ' + localStorage.getItem('type'));
     this.dialog.closeAll();
   }
 }

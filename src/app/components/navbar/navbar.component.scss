@@ -174,3 +174,11 @@
     }
   }
 }
+
+.search-button {
+  &:hover {
+    background-color: #6d0808;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+}

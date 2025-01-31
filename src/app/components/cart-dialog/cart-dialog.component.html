@@ -1,7 +1,7 @@
 <h2 mat-dialog-title class="dialog-title">Shopping Cart</h2>
 <div class="type-container">
   <p>Type: {{ orderType }}</p>
-  <button (click)="changeType()">Change Order Type</button>
+  <button (click)="changeType()" class="green-btn">Change Order Type</button>
 </div>
 <mat-dialog-content class="dialog-content">
   <div class="shopping-list">
@@ -13,12 +13,13 @@
         <p class="item-title">{{ item.title }}</p>
         <p>{{ item.price | currency }}</p>
       </div>
-      <button (click)="removeItem(item)" class="remove">X</button>
+      <button (click)="removeItem(item)" class="remove">
+        <p>Remove</p>
+      </button>
     </div>
   </div>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-  <p>Total: {{ totalPrice }}</p>
-  <button class="checkout-btn">Checkout</button>
+  <button class="checkout-btn green-btn">Checkout</button>
   <button (click)="close()" class="cancel-btn">Cancel</button>
 </mat-dialog-actions>
